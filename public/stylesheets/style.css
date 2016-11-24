@@ -1,0 +1,147 @@
+h1.tamplr-logo {
+  font-family: 'Bree Serif', serif;
+  color: violet ;
+}
+
+h1.tamplr-logo:after {
+  content: ".";
+  position: relative;
+  right: 0.1em;
+}
+#container
+{
+  width:900px;
+  margin:0 auto;
+  overflow:auto;
+}
+#header
+{
+  height:90px;
+}
+#nav
+{
+  overflow:auto;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: thin;
+}
+#nav ul
+{
+  list-style:none;
+  height:30px;
+  padding:0px;
+  margin:0px;
+}
+#nav ul li
+{
+  float:left;
+  margin:10px;
+}
+#nav ul log
+{
+  float:right;
+  margin:10px;
+}
+#main
+{
+  overflow:auto;
+  margin-top:3px;
+}
+#main_left
+{
+  float:left;
+  width:599px;
+  min-height:400px;
+}
+#main_right
+{
+  float:left;
+  width:299px;
+  min-height:400px;
+  border-style: groove;
+  border-width: 0px;
+  border-left-width: 1px;
+}
+#footer
+{
+  height:40px;
+}
+
+#posts
+{
+  border-style: dotted;
+  border-width: 0px;
+  border-top-width: 5px;
+}
+
+#posts li
+{
+  list-style: none;
+  border-style: dashed;
+  border-width: 0px;
+  border-bottom-width: 1px;
+}
+#posts h4
+{
+  background-color: lightblue;
+}
+#comment
+{
+  border-style: dotted;
+  border: 2px;
+  margin-top:3px;
+}
+#form
+{
+  background-color: #f3f3f3;
+  border: solid 1px #a1a1a1;
+  padding: 10px;
+}
+#form label, #form input
+{
+    display: block;
+    width: 120px;
+    float: left;
+    margin-bottom: 10px;
+}
+#form label
+{
+    text-align: right;
+    padding-right: 20px;
+}
+br
+{
+     clear: left;
+}
+#userinfo
+{
+  border-style: solid;
+  border-width: 1px;
+  background: lightblue;
+  width: 280px;
+}
+.rating {
+  background: lightblue;
+  text-align: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: 50px 30 50px 100px;
+}
+
+.likes {
+  background: #F65A5B ;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 -30px 0 40px;
+  text-align: center;
+  font-weight: 200;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 500ms;
+}

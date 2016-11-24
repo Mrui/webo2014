@@ -1,0 +1,24 @@
+#/bin/bash
+echo -e "Lis‰t‰‰n blogiin 3 postaus"
+curl -X POST http://localhost:3000/api/blog/3/posts -H 'Content-Type: application/json' -d '{"title": "Pallot", "text":"Saatanan kullinaama" }' -u 'kurwa1:sala123'
+echo -e "\nkurwa2 postailuja lis‰t‰‰n!"
+curl -X POST http://localhost:3000/api/blog/kurwa2/posts -H 'Content-Type: application/json' -d '{"title": "Testi2 1", "text":"Testauspostaus kurwailee2 1" }' -u 'kurwa2:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa2/posts -H 'Content-Type: application/json' -d '{"title": "Testi2 2", "text":"Testauspostaus kurwailee2 2" }' -u 'kurwa2:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa2/posts -H 'Content-Type: application/json' -d '{"title": "Testi2 3", "text":"Testauspostaus kurwailee2 3" }' -u 'kurwa2:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa2/posts -H 'Content-Type: application/json' -d '{"title": "Testi2 4", "text":"Testauspostaus kurwailee2 4" }' -u 'kurwa2:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa2/posts -H 'Content-Type: application/json' -d '{"title": "Testi2 5", "text":"Testauspostaus kurwailee2 5" }' -u 'kurwa2:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa2/posts -H 'Content-Type: application/json' -d '{"title": "Testi2 6", "text":"Testauspostaus kurwailee2 6" }' -u 'kurwa2:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa2/posts -H 'Content-Type: application/json' -d '{"title": "Testi2 7", "text":"Testauspostaus kurwailee2 7" }' -u 'kurwa2:sala123'
+echo -e "\nKurwa1 postailuja lis‰t‰‰n!"
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 1" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 2" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 3" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 4" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 5" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 6" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 7" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 8" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 9" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 10" }' -u 'kurwa1:sala123'
+curl -X POST http://localhost:3000/api/blog/kurwa1/posts -H 'Content-Type: application/json' -d '{"title": "Testi 1", "text":"Testauspostaus kurwailee 11" }' -u 'kurwa1:sala123'
+

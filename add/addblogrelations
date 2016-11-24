@@ -1,0 +1,4 @@
+#/bin/bash
+echo -e "\nLis‰t‰‰n blogeille 3 ja 4 author kurwa1"
+curl -X POST http://localhost:3000/api/blog/4/author/kurwa1 -u 'kurwa2:sala123'
+

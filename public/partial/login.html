@@ -1,0 +1,16 @@
+<div id="main">
+  <div>
+  <h3>Kirjaudu</h3>
+  <form id="form">
+    <div>
+      <label>Käyttäjä:</label>
+      <input type="text" name="kayttaja" ng-model="logForm.username"/><br>
+    </div><div>
+      <label>Salasana:</label>
+      <input type="password" name="salasana" ng-model="logForm.password"/><br>
+    </div><div>
+      <input type="submit" value="Kirjaudu" ng-click="logForm.submit()"/>
+    </div>
+  </div>
+    <h2 ng-show="failure">KIRJAUTUMINEN EPÄONNISTUI</h2>
+</div>

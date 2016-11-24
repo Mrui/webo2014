@@ -1,0 +1,15 @@
+<h3>Rekisteröidy</h3>
+<form id="form">
+  <div>
+    <label>Käyttäjänimi:</label>
+    <input type="text" name="username" ng-model="regForm.username"/><br>
+  </div><div>
+    <label>Salasana:</label>
+    <input type="password" name="password" ng-model="regForm.password"/><br>
+  </div><div>
+    <label>Nimi:</label>
+    <input type="text" name="name" ng-model="regForm.name"/><br>
+  </div><div>
+    <input type="submit" ng-click="regForm.submit()" value="Rekisteröidy"/>
+  </div>
+</form>

@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-6">
+    <h3>{{ post.title }}</h3>
+    <p>Postauksen jättäjä: {{ post.author }}</p>
+    <p>{{ post.text }}</p>
+    <div class="rating">Tykkäykset:<p class="likes" ng-click="like()">{{post.likes}}</p></div>
+  </div>
+  <div class="col-md-3">
+    <p><h5>Kommentit</h5><p>
+      <ul>
+        <li ng-repeat="comment in comments" id='comment'>
+          <p> Author: {{ comment.author }}</p>
+          <p> {{ comment.text }}</p>
+        </li>
+        <li ng-hide="comments">Ei kommentteja, ole ensimmäinen kommentoija!</li>
+      </ul>
+      <div ng-hide="logged"><h4>Kirjaudu sisään kommentoidaksesi</h4></div>
+      <div ng-show="logged">
+        <h5>Kommentoi:</h5>
+        <form id="form">
+          <input type="text" name="kommentti" ng-model="newComment.text" placeholder="Uusi kommentti"/><br>
+          <input type="submit" ng-click="newComment.submit()" value="Lähetä"/>
+        </form>
+      </div>
+    </div>
+  </div>

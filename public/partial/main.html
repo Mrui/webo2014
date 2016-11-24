@@ -1,0 +1,10 @@
+<h3>Uusimmat postaukset</h3>
+<p>
+  <ul id="posts">
+    <li ng-repeat="post in posts">
+      <h4><a href="#/post/{{post.id}}">{{ post.title }}</a></h4>
+      <p>Post author: {{ post.author }}</p>
+      <p>{{ post.text }}</p>
+    </li>
+  </ul>
+</p>

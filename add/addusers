@@ -1,0 +1,5 @@
+#/bin/bash
+echo -e "Lis‰t‰‰n k‰ytt‰j‰ kurwa1\n"
+curl -X POST http://localhost:3000/api/user -H 'Content-Type: application/json' -d '{"username": "kurwa1", "name":"TeemuTeekkarri", "password":"sala123" }'
+echo -e "Lis‰t‰‰n k‰ytt‰j‰ kurwa2\n"
+curl -X POST http://localhost:3000/api/user -H 'Content-Type: application/json' -d '{"username": "kurwa2", "name":"TeemuTeekkarri", "password":"sala123" }'

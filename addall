@@ -1,0 +1,6 @@
+#/bin/bash
+bash ./add/addusers
+bash ./add/addblogs
+bash ./add/addblogrelations
+bash ./add/addposts
+

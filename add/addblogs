@@ -1,0 +1,5 @@
+#/bin/bash
+echo -e "Lis‰t‰‰n blogi simapallo"
+curl -X POST http://localhost:3000/api/blog -H 'Content-Type: application/json' -d '{"name":"Simapallo" }' -u 'kurwa1:sala123'
+echo -e "\nLis‰t‰‰n blogi Testiblogi 1"
+curl -X POST http://localhost:3000/api/blog -H 'Content-Type: application/json' -d '{"name":"Testiblogi 1" }' -u 'kurwa2:sala123'

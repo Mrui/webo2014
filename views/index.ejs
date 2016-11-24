@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app='tamplrApp'>
+<head>
+  <title>Tamplr</title>
+  <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='stylesheets/style.css' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+  <script src="https://code.angularjs.org/1.2.25/angular-resource.min.js"></script>
+  <script src='javascript/app.js'></script>
+  <script src='javascript/controllers.js'></script>
+  <script src='javascript/services.js'></script>
+</head>
+<body>
+
+  <div id="container">
+
+    <div id="header">
+      <h1 class="tamplr-logo">tamplr goes 90's</h1>
+    </div>
+
+    <div id="nav" ng-controller="tamplrMainCtrl">
+      <ul>
+        <li><a href="/#/">HOME</a></li>
+        <log><a href="#/user/{{logged}}">{{logged}}</a></log>
+        <log ng-hide="logged"><a href="#/login">KIRJAUDU</a></log>
+        <log ng-hide="logged"><a href="#/signup">REKISTERÖIDY</a></log>
+      </ul>
+    </div>
+    <div id="main" class="row">
+      <div ng-view class="col-sm-8" id="main_left"></div>
+
+      <div id="main_right">
+        <div class="col-sm-2" ng-controller="tamplrMainCtrl">
+          <p>Tamplr:ssa tällä hetkellä olevat blogit.
+            <ul>
+              <li ng-repeat="blog in blogs">
+                <a href="#/blog/{{blog.id}}">{{ blog.name }}</a>
+              </li>
+            </ul>
+          </p>
+
+          <p>Tamplr rekisteröityneet käyttäjät.
+            <ul>
+              <li ng-repeat="user in users">
+                <a href="#/user/{{user.username}}">{{ user.username }}</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+        <div ng-hide="logged">
+          <h3>Kirjaudu</h3>
+          <form ng-controller='loginCtrl'>
+            <div>
+              <input type="text" name="kayttaja" placeholder="Käyttäjä" ng-model="logForm.username"/>
+            </div><div>
+              <input type="password" name="salasana" placeholder="Salasana" ng-model="logForm.password"/>
+            </div><div>
+              <input type="submit" value="Kirjaudu" ng-click="logForm.submit()"/>
+            </div>
+          </form>
+        </div>
+        <div ng-show="logged">Kirjautunut: {{logged}} <a href="/logout">Kirjaudu ulos</a></div>
+      </div>
+    </div>
+    <div id="footer">
+      <p align="right"> Perhanan hieno FOOTTERITEKSTI </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+<h3>{{user.username}}</h3>
+<p>Nimi: {{user.name}}</p>
+<div class="row">
+  <div class="col-sm-1" id="userinfo">
+    <p>Käyttäjän {{user.username}} blogit:
+      <ul>
+        <li ng-repeat="blog in blogs">
+          <a href="#/blog/{{blog.id}}">{{blog.id}}</a>
+        </li>
+      </ul>
+    </p>
+  </div><br>
+  <div class="col-sm-1" id="userinfo">
+    <p>Käyttäjän seuraamat blogit</p>
+    <ul>
+      <li ng-repeat="follow in follows">
+        <a href="#/blog/{{follow.id}}">{{follow.id}}</a>
+      </li>
+      <li ng-hide="follows">Ei seurattuja blogeja</li>
+    </ul>
+  </div>
+</div>

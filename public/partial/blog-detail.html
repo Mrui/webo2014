@@ -1,0 +1,22 @@
+<h3>{{blog.name}}</h3>
+<p>
+  <div ng-show="logged">
+    <form id="form">
+      <h3>Lisää uusi blogipostaus:</h3>
+      <input type="text" name="kommentti" ng-model="postForm.title" placeholder="Otsikko"/><br>
+      <textarea name="newPost" placeholder="Uusi blogipostaus" ng-model="postForm.text"></textarea><br>
+      <input type="submit" ng-click="postForm.submit()" value="Lähetä postaus"/>
+    </form>
+  </div>
+  <div ng-hide="logged">
+    <h4>Kirjaudu sisään kirjoittaaksesi blogipostauksia</h4>
+  </div>
+  <ul id="posts">
+    <li ng-repeat="post in posts">
+      <h4><a href="#/post/{{post.id}}">{{ post.title }}</a></h4>
+      <p>Post author: {{ post.author }}</p>
+      <p>{{ post.text }}</p>
+    </li>
+    <li ng-hide="posts.length">Ei postauksia</li>
+  </ul>
+</p>
